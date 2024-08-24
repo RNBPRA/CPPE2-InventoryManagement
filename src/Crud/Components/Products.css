@@ -1,0 +1,243 @@
+.products-page {
+    background-image: url('https://img.freepik.com/premium-photo/photo-smiling-portrait-male-supervisor-standing-warehouse-warehouse-management_1025753-56278.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    color: #f5f5f5;
+    position: fixed;
+    height: 100%;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 220px; /* Adjusted to accommodate the fixed sidebar */
+    overflow-x: auto;
+}
+
+.crud-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 1200px;
+    color: #f5f5f5;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    margin: 10px 10px;
+}
+
+.crud-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #ffd700;
+}
+
+.crud-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+.crud-container table th,
+.crud-container table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.crud-container table th {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.crud-container table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.crud-container table tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.crud-container table input[type="text"],
+.crud-container table input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ffd700;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 3px;
+}
+
+.crud-container table input[type="text"]:focus,
+.crud-container table input[type="number"]:focus {
+    outline: none;
+    border-color: #ffd700;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* .crud-container button {
+    background-color: yellow;
+    color: #000;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+} */
+
+.edit-button{
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin : 0px;
+    padding : 4px; 
+}
+
+/* .edit-button :hover{
+    background-color: #044413;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin : 0px;
+    padding : 4px; 
+} */
+
+.save-button{
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin : 0px;
+    padding : 4px 10px; 
+}
+
+.delete-button{
+    background-color: #dc3545;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin: 0px;
+    padding : 4px 10px;
+}
+
+.crud-container .edit-button:hover {
+    background-color: #1f740a;
+}
+
+.crud-container .delete-button:hover {
+    background-color: rgb(170, 9, 9) ;
+}
+
+.crud-container .action-buttons {
+    display: flex;
+}
+
+.crud-container .action-buttons button {
+    margin: 5px;
+}
+
+.alert {
+    background-color: rgba(255, 69, 58, 0.9);
+    color: #fff;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+
+.alert button {
+    background: none;
+    border: 2px solid red;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 35px;
+    font-size: 40;
+}
+
+.alert button:hover {
+    background-color: red;
+    color: white;
+}
+
+.alert .alert-icon {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        position: static;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .crud-container {
+        padding: 15px;
+    }
+
+    .crud-container .action-buttons {
+        flex-direction: column;
+    }
+
+    .crud-container .action-buttons button {
+        margin: 5px 0;
+    }
+}
+/* .action-button{
+    display: flex;
+    justify-content: space-between; /* Aligns the icons side by side with space between them */
+    /* align-items: center;
+    padding: 0;
+}  */
+
+/* .action-buttons {
+  display: flex;
+  justify-content: space-around; 
+  width: 100%;
+} */
+
+.action-buttons button {
+  margin: 0 5px;
+  display: inline-flex;
+  flex-direction: row;
+}
